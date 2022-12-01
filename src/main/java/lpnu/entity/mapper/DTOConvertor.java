@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
 
+// Клас конвертор, який перетворює клас сутності в клас DTO
 @Component
 public class DTOConvertor {
     private final ModelMapper modelMapper;
@@ -19,13 +20,12 @@ public class DTOConvertor {
         return modelMapper.map(dto, (Type) entity.getClass());
     }
 
-
     public <T, D extends Convertable> T convertToDto(D entity, Type dtoClass) {
         return modelMapper.map(entity, dtoClass);
     }
-
 
     public <T, D extends Convertable> D convertFromDtoToDto(T dtoConverted, D dtoConverting) {
         return modelMapper.map(dtoConverted, (Type) dtoConverting.getClass());
     }
 }
+//************************************************

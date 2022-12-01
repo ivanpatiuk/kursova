@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.HashMap;
 import java.util.Map;
 
+// Репозиторій класу працівник
 @Repository
 public class WorkerRepository{
     private final Map<Long, Worker> employeeRepository = new HashMap<>();
@@ -30,3 +31,4 @@ public class WorkerRepository{
         return employeeRepository.getOrDefault(id, null);
     }
 }
+//************************************************

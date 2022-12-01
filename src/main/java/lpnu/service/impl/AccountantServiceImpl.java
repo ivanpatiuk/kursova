@@ -16,11 +16,9 @@ import lpnu.simulation.BankAPI;
 import lpnu.simulation.Paydesk;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Objects;
 
+// Клас який відповідає за сервіс (логіку) бухгалтера
 @Service
 public class AccountantServiceImpl implements AccountantService {
     private final AccountantRepository accountantRepository;
@@ -38,29 +36,20 @@ public class AccountantServiceImpl implements AccountantService {
         this.payoutRepository = payoutRepository;
     }
 
+    // Метод для отримання бухгалтера за ідентифікатором
     @Override
     public AccountantDTO getAccountantById(final Long id) {
         final Accountant accountant = accountantRepository.getAccountantById(id);
         return Objects.isNull(accountant) ? null : dtoConvertor.convertToDto(accountant, AccountantDTO.class);
     }
 
-    @Override
-    public Iterable<AccountantDTO> getAccountantsByIds(final List<Long> idList) {
-        final List<AccountantDTO> accountants = new LinkedList<>();
-        idList.forEach(id -> {
-            final Accountant accountant = accountantRepository.getAccountantById(id);
-            if (Objects.nonNull(accountant)) {
-                accountants.add(dtoConvertor.convertToDto(accountant, AccountantDTO.class));
-            }
-        });
-        return accountants;
-    }
-
+    // Метод для створення бухгалтера
     @Override
     public AccountantDTO createAccountant(final Accountant accountant) {
         return accountantRepository.addAccountant(accountant);
     }
 
+    // Загальний метод для проведення виплати
     private Payout executePayout(final Long accountantId, final Long workerId, final String sitePassword, final WithdrawType withdrawType) {
         authorization.authorizeAccountant(accountantId, sitePassword);
         final Worker worker = workerRepository.getWorkerById(workerId);
@@ -83,16 +72,19 @@ public class AccountantServiceImpl implements AccountantService {
 
     }
 
+    // Метод для проведення виплати на картку
     @Override
     public Payout executePayoutOnCard(final Long accountantId, final Long workerId, final String sitePassword) {
         return executePayout(accountantId, workerId, sitePassword, WithdrawType.CARD);
     }
 
+    // Метод для проведення виплати готівкою
     @Override
     public Payout executePayoutInPaydesk(final Long accountantId, final Long workerId, String sitePassword) {
         return executePayout(accountantId, workerId, sitePassword, WithdrawType.PAYDESK);
     }
 
+    // Метод для закриття виплати
     @Override
     public Payout closePayout(final Long accountantId, final Long workerId, final String sitePassword) {
         final Worker worker = workerRepository.getWorkerById(workerId);
@@ -102,3 +94,4 @@ public class AccountantServiceImpl implements AccountantService {
         return payout;
     }
 }
+//************************************************

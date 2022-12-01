@@ -1,9 +1,9 @@
 package lpnu.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.Objects;
 
+// Клас працівник
 public class Worker extends Employee{
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Double salary;
@@ -38,3 +38,5 @@ public class Worker extends Employee{
         return Objects.hash(salary);
     }
 }
+//************************************************
+

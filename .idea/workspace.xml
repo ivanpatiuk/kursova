@@ -4,42 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="779a438f-b4f6-4a1e-9500-f779e15b5521" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/AccountantController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/WorkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/AccountantDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/WorkerDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Accountant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Payout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/Convertable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/DTOConvertor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/enums/PayoutState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/enums/WithdrawType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/InternalException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/IntervalExceptionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/RestResponseEntityExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/AccountantRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/PayoutRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/WorkerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/AccountantService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/WorkerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/AccountantServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/Authorization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WorkerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/simulation/BankAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lpnu/simulation/Paydesk.java" afterDir="false" />
+    <list default="true" id="779a438f-b4f6-4a1e-9500-f779e15b5521" name="Changes" comment="v1.0.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/AccountantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/AccountantController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/controller/WorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/controller/WorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/dto/AccountantDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/AccountantDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/dto/WorkerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/dto/WorkerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Accountant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Accountant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Payout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Payout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/Convertable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/Convertable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/DTOConvertor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/entity/mapper/DTOConvertor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/enums/PayoutState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/enums/PayoutState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/enums/WithdrawType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/enums/WithdrawType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/InternalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/InternalException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/IntervalExceptionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/IntervalExceptionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/RestResponseEntityExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/exceptions/RestResponseEntityExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/repository/AccountantRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/AccountantRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/repository/PayoutRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/PayoutRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/repository/WorkerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/repository/WorkerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/AccountantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/AccountantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/WorkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/WorkerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/AccountantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/AccountantServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/Authorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/Authorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WorkerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/service/impl/WorkerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/simulation/BankAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/simulation/BankAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lpnu/simulation/Paydesk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lpnu/simulation/Paydesk.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,23 +60,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Patiuk/Java/kursova/src/main/java/lpnu/entity",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Patiuk/Java/kursova/src/main/java/lpnu/entity&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8108c5920b79d0469518cdf35955752c&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Patiuk\Java\kursova\src\main\java\lpnu\entity" />
@@ -119,8 +115,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668624509941</updated>
-      <workItem from="1668624511322" duration="17732000" />
+      <workItem from="1668624511322" duration="24572000" />
+      <workItem from="1669061929000" duration="1226000" />
+      <workItem from="1669380228427" duration="602000" />
+      <workItem from="1669400334251" duration="1311000" />
+      <workItem from="1669622012993" duration="9000" />
+      <workItem from="1669888135469" duration="352000" />
     </task>
+    <task id="LOCAL-00001" summary="v1.0.0">
+      <created>1668646454588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668646454588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +145,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v1.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.0.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,6 +3,7 @@ package lpnu.entity;
 import lpnu.enums.PayoutState;
 import lpnu.enums.WithdrawType;
 
+// Клас виплата
 public class Payout {
     private PayoutState payoutState;
     private WithdrawType withdrawType;
@@ -41,3 +42,5 @@ public class Payout {
         this.withdrawType = withdrawType;
     }
 }
+//************************************************
+

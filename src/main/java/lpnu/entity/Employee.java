@@ -2,10 +2,10 @@ package lpnu.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lpnu.entity.mapper.Convertable;
-
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
+// Абстрактний клас співробітник, який успадковує бухгалтер та працівник
 public abstract class Employee implements Convertable {
     @JsonIgnore
     private Long id;
@@ -70,3 +70,5 @@ public abstract class Employee implements Convertable {
         return Objects.hash(id, name, surname, sitePassword);
     }
 }
+//************************************************
+

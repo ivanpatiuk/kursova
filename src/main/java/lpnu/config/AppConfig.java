@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// Додатковий клас для конфігурації
 @Configuration
 public class AppConfig {
     @Bean
@@ -11,3 +12,4 @@ public class AppConfig {
         return new ModelMapper();
     }
 }
+//************************************************

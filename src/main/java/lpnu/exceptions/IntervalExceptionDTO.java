@@ -1,11 +1,17 @@
 package lpnu.exceptions;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+// Клас виняткової ситуації
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class IntervalExceptionDTO {
     private int code;
     private String message;
     private String details;
-
-    public IntervalExceptionDTO() { }
 
     public IntervalExceptionDTO(final InternalException ex) {
         this.code = ex.getCode();
@@ -16,34 +22,6 @@ public class IntervalExceptionDTO {
         this.code = code;
         this.message = message;
     }
-
-    public IntervalExceptionDTO(final int code, final String message, final String details) {
-        this.code = code;
-        this.message = message;
-        this.details = details;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
 }
+//************************************************
+

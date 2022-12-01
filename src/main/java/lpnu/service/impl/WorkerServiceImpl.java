@@ -6,17 +6,14 @@ import lpnu.entity.Worker;
 import lpnu.entity.mapper.DTOConvertor;
 import lpnu.enums.PayoutState;
 import lpnu.enums.WithdrawType;
-import lpnu.exceptions.InternalException;
 import lpnu.repository.PayoutRepository;
 import lpnu.repository.WorkerRepository;
 import lpnu.service.WorkerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Objects;
 
+// Клас який відповідає за сервіс (логіку) працівника
 @Service
 public class WorkerServiceImpl implements WorkerService {
 
@@ -33,29 +30,20 @@ public class WorkerServiceImpl implements WorkerService {
         this.payoutRepository = payoutRepository;
     }
 
+    // Метод отримання працівника за ідентифікатором
     @Override
     public WorkerDTO getWorkerById(final Long id) {
         final Worker worker = workerRepository.getWorkerById(id);
         return Objects.isNull(worker) ? null : dtoConvertor.convertToDto(worker, WorkerDTO.class);
     }
 
-    @Override
-    public Iterable<WorkerDTO> getWorkersByIds(final List<Long> idList) {
-        final List<WorkerDTO> workers = new LinkedList<>();
-        idList.forEach(id -> {
-            final Worker worker = workerRepository.getWorkerById(id);
-            if (Objects.nonNull(worker)) {
-                workers.add(dtoConvertor.convertToDto(worker, WorkerDTO.class));
-            }
-        });
-        return workers;
-    }
-
+    // Метод створення працівника
     @Override
     public WorkerDTO createWorker(final Worker worker) {
         return workerRepository.addWorker(worker);
     }
 
+    // Загальний метод формування виплати
     private Payout orderPayout(final Long workerId, final String sitePassword, final WithdrawType withdrawType) {
         final Worker worker = authorization.authorizeWorker(workerId, sitePassword);
         final Payout payout = new Payout(PayoutState.OPEN, withdrawType, worker.getSalary());
@@ -63,16 +51,19 @@ public class WorkerServiceImpl implements WorkerService {
         return payout;
     }
 
+    // Метод формування виплати на картку
     @Override
     public Payout orderPayoutOnCard(final Long workerId, final String sitePassword) {
         return orderPayout(workerId, sitePassword, WithdrawType.CARD);
     }
 
+    // Метод формування виплати готівкою
     @Override
     public Payout orderPayoutInPaydesk(final Long workerId, final String sitePassword) {
         return orderPayout(workerId, sitePassword, WithdrawType.PAYDESK);
     }
 
+    // Метод підтвердження виплати
     @Override
     public Payout approvePayout(final Long workerId, final String sitePassword) {
         final Worker worker = workerRepository.getWorkerById(workerId);
@@ -82,3 +73,4 @@ public class WorkerServiceImpl implements WorkerService {
         return payout;
     }
 }
+//************************************************

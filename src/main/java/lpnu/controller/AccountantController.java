@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Клас контролер бухгалтера. Відповідає за отримання запиту
+// та відправки відповіді
 @RequestMapping("/api/v1/accountant-panel/")
 @RestController
-
 public class AccountantController {
 
     private final AccountantService accountantService;
@@ -22,24 +23,21 @@ public class AccountantController {
         this.accountantService = accountantService;
     }
 
+    // Метод отримання бухгалтера за ідентифікатором
     @GetMapping("get-accountant-by-id/{id}")
     @ResponseBody
     public AccountantDTO getAccountantById(@RequestParam final Long id) {
         return accountantService.getAccountantById(id);
     }
 
-    @GetMapping("get-accountants-by-ids")
-    @ResponseBody
-    public Iterable<AccountantDTO> getWorkersByIds(@RequestBody final List<Long> idsList) {
-        return accountantService.getAccountantsByIds(idsList);
-    }
-
+    // Метод для створення бухгалтера
     @PostMapping("create-accountant")
     @ResponseBody
-    public AccountantDTO createUser(@Validated @RequestBody final Accountant accountant) {
+    public AccountantDTO createAccountant(@Validated @RequestBody final Accountant accountant) {
         return accountantService.createAccountant(accountant);
     }
 
+    // Метод для проведення виплати на карту
     @PostMapping("execute-payout-on-card")
     @ResponseBody
     public Payout executePayoutOnCard(
@@ -49,6 +47,7 @@ public class AccountantController {
         return accountantService.executePayoutOnCard(accountantId, workerId, sitePassword);
     }
 
+    // Метод для проведення виплату в касі банку
     @PostMapping("execute-payout-in-paydesk")
     @ResponseBody
     public Payout executePayoutInBank(
@@ -58,6 +57,7 @@ public class AccountantController {
         return accountantService.executePayoutInPaydesk(accountantId, workerId, sitePassword);
     }
 
+    // Метод для закриття виплати
     @PostMapping("close-payout")
     @ResponseBody
     public Payout closePayout(
@@ -67,3 +67,4 @@ public class AccountantController {
         return accountantService.closePayout(accountantId, workerId, sitePassword);
     }
 }
+//************************************************

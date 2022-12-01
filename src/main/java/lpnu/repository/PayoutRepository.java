@@ -2,15 +2,13 @@ package lpnu.repository;
 
 import lpnu.entity.Payout;
 import lpnu.entity.Worker;
-import lpnu.enums.PayoutState;
-import lpnu.enums.WithdrawType;
 import lpnu.exceptions.InternalException;
 import org.springframework.stereotype.Repository;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+// Репозиторій виплат
 @Repository
 public class PayoutRepository {
     private final Map<Worker, Payout> payoutRepository = new HashMap<>();
@@ -39,3 +37,4 @@ public class PayoutRepository {
         return payoutRepository.remove(worker);
     }
 }
+//************************************************

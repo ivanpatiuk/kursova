@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
+// Клас для відловлення помилок та передачі їх у відповідь запиту
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler {
     @ExceptionHandler(value = InternalException.class)
@@ -14,3 +15,4 @@ public class RestResponseEntityExceptionHandler {
                 ex.getMessage(), ex.getDetails()));
     }
 }
+//************************************************

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
+// Клас для проходження атворизації
 @Component
 public class Authorization {
     private final WorkerRepository workerRepository;
@@ -21,6 +22,7 @@ public class Authorization {
         this.accountantRepository = accountantRepository;
     }
 
+    // Авторизація працівника
     public Worker authorizeWorker(final Long workedId, final String sitePassword) {
         final Worker worker = workerRepository.getWorkerById(workedId);
         if (Objects.nonNull(worker)) {
@@ -32,6 +34,7 @@ public class Authorization {
         throw new InternalException(400, "Worker with workedId '" + workedId + "'doesn't exist in DB.");
     }
 
+    // Авторизація бухгалтера
     public Accountant authorizeAccountant(final Long accountId, final String sitePassword) {
         final Accountant accountant = accountantRepository.getAccountantById(accountId);
         if (Objects.nonNull(accountant)) {
@@ -43,3 +46,5 @@ public class Authorization {
         throw new InternalException(400, "Accountant with accountId '" + accountId + "'doesn't exist in DB.");
     }
 }
+//************************************************
+
